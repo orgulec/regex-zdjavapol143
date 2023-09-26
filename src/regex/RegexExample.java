@@ -25,7 +25,7 @@ public class RegexExample {
         tester2.validate("345sdfgsdf345");
 
         String t = "\\d\\w\\d";
-        RegexTester tester3 = new RegexTester(p);
+        RegexTester tester3 = new RegexTester(t);
         tester3.validate("1_6");
         tester3.validate("0X4");
         tester3.validate("a7b");
