@@ -8,9 +8,9 @@ public class Regex001 {
     zaczynające się cyfrą 5
     Uwzględnij że na początku może ale nie musi być +48 !
      */
-    private static final Pattern PATTERN = Pattern.compile("(\\+48)?5[0-9]{8}");
-
     public static void main(String[] args) {
+
+        RegexTester tester = new RegexTester("(\\+48)?5[0-9]{8}");
         /*
         Prawda dla tekstu: 515332123
         Prawda dla tekstu: 515336293
@@ -20,25 +20,16 @@ public class Regex001 {
         Fałsz dla tekstu: 712123
         Fałsz dla tekstu: 51123
          */
-        validate("515332123");
-        validate("+48515332123");
-        validate("+48432122123");
-        validate("515336293");
-        validate("415336293");
-        validate("615332123");
-        validate("715332123");
-        validate("712123");
-        validate("51123");
+        tester.validate("515332123");
+        tester.validate("+48515332123");
+        tester.validate("+48432122123");
+        tester.validate("515336293");
+        tester.validate("415336293");
+        tester.validate("615332123");
+        tester.validate("715332123");
+        tester.validate("712123");
+        tester.validate("51123");
     }
-    public static void validate(String text){
-        Matcher matcher = PATTERN.matcher(text);
-        if(matcher.matches()){
-            System.out.println("Prawda dla tekstu: " + text);
-        } else {
-           System.out.println("Fałsz dla tekstu: " + text);
-        }
-    }
-
 
 }
 
