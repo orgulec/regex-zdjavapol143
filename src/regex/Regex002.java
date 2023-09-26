@@ -6,7 +6,8 @@ package regex;
  */
 public class Regex002 {
     public static void main(String[] args) {
-        String p = "[A-Z][a-z]{1,}";
+        //String p = "[A-Z]{1}[a-z]{1,}";
+        String p = "[A-Z][a-z]+";   //uproszczony
         RegexTester tester = new RegexTester(p);
 
         tester.validate("Java");//true
