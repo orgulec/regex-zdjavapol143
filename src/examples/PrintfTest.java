@@ -40,8 +40,6 @@ public class PrintfTest {
         //puste pola przed przecinkiem wypełnij 0
         //zrób 2 miejscapo przecinku
         System.out.printf("  #%010.2f#\n", 2.28);
-        System.out.printf("");
-        System.out.printf("");
 
 
     }

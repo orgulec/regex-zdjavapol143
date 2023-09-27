@@ -1,0 +1,34 @@
+ZADANIE XX.
+Napisz program, składający się z kilku klas. Na początku utwórz pakiet
+com.sda.literature
+Pamiętaj, że każdy z wyrazów odpowiada jednemu folderowi w strukturze plików.
+Teraz w pakiecie literature utwórz:
+a. Klasy Author, reprezentującą autora – pisarza wierszów, składającej się z
+pól firstname, surname oraz nationality (wszystko String)
+metody getNationality()
+metody publicznej getAuthorInfo()
+Pola i metody powinny być prywatne (oprócz getAuthorInfo)
+b. Klasy Poem, reprezentującą wiersz, składającą się z
+pól creator (typu Author), stropheNumbers (typu int – reprezentującej ilość zwrotek wiersza), title (reprezentującą tytuł wiersza)
+metody getTitle
+Pola i metody powinny mieć modyfikator domyślny (tzw. package-private)
+Na razie nie twórz setterów/getterów dla wszystkich pól (oprócz nationality i stropheNumbers)
+W pakiecie literature utwórz klasę TestInPackage, w której udowodnisz, że w tym samym pakiecie możesz korzystać z pól i metod o dostępie domyślnym i publicznym, ale nie prywatnym.
+W pakiecie sda utwórz klasę Main, w której pokażesz, że nie masz dostępu do pól i metod prywatnych, ani o dostępie domyślnym a masz dostęp do publicznych.
+Zostaw wszystko tak jak jest i utwórz nowy pakiet pl.sda.literature i skopiuj klasy Author i Poem
+W klasie Author:
+zostaw dla pól dostep prywatny
+dla getNationality ustaw dostęp publiczny
+stwórz dla wszystkich pól publiczne gettery
+dla nationality stwórz publiczny setter
+stwórz konstruktor o sygnaturze Author(String firstname, String surname); niech pozostawia on wartość nationality jako pustą
+W  klasie Poem:
+polom ustaw dostęp prywatny
+stwórz dla wszystkich pól publiczne gettery i settery
+Dodaj metody toString dla tych klas
+W pakiecie sda utwórz klasę Main, w której znajdzie się metoda main, a w niej kod w którym:
+i. Stworzysz trzy obiekty klasy Poem, uzupełniając go wszystkimi danymi (stwórz najpierw autorów)
+ii. Stwórz tablicę ze wszystkimi utworzonymi obiektami klasy poem
+ii. Wypiszesz nazwisko tego autora, który napisał wiersz o największej liczbie zwrotek (niech odpowiedź obliczy Twój program!)
+Do klasy Author dodaj klasowe (statyczne) pole o nazwie numberOfAuthors (typ long). Zapewnij bezpieczny mechanizm do liczenia obecnej liczby autorów.
+Nadaj każdemu autorowi id (pole typu long) na podstawie klasowego pola numberOfAuthors*
