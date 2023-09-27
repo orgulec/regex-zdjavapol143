@@ -2,7 +2,7 @@ package pl.sda.literature;
 
 public class Author {
     private String firstname;
-    private String surname;
+    private String surName;
     private String nationality;
 
     public String getNationality() {
@@ -13,8 +13,8 @@ public class Author {
         return firstname;
     }
 
-    public String getSurtname() {
-        return surname;
+    public String getSurname() {
+        return surName;
     }
 
     public void setNationality(String nationality) {
@@ -25,7 +25,17 @@ public class Author {
         return "Moja informacja o autorze:\n" + firstname;
     }
 
-    public Author(String firstname, String surname){
+    public Author(String firstname, String surName){
+        this.firstname = firstname;
+        this.surName = surName;
+    }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "firstname='" + firstname + '\'' +
+                ", surname='" + surName + '\'' +
+                ", nationality='" + nationality + '\'' +
+                '}';
     }
 }
